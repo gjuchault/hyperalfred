@@ -1,0 +1,17 @@
+{
+  "name": "hyperalfred",
+  "version": "0.0.1",
+  "description": "Open hyper with alfred commands",
+  "main": "index.js",
+  "keywords": [
+    "hyper",
+    "alfred"
+  ],
+  "repository": "https://github.com/gjuchault/hyperalfred.git",
+  "author": "Gabriel Juchault <gabriel.juchault@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/gjuchault/hyperalfred#readme",
+  "dependencies": {
+    "graceful-fs": "^4.1.11"
+  }
+}
