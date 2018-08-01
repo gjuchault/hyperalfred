@@ -2,6 +2,8 @@
 
 ⚡🔎🎩 Makes Alfred works with Hyper terminal
 
+![hyperalfred](https://raw.githubusercontent.com/gjuchault/hyperalfred/master/hyperalfred.gif)
+
 ## Installation
 
 ### Hyper plugin
@@ -53,4 +55,4 @@ Once the plugin is loaded on Hyper, it checks that file for a command. If there 
 
 ## Caveats
 
-hyperalfred will only work if Hyper is not already the focused application. That means you can not expect to launch a command from Alfred if Hyper is the focused application. This is because Alfred does not make Hyper to loose focus.
+hyperalfred will not work if Hyper is **not** already the focused application.
