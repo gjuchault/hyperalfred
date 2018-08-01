@@ -19,8 +19,8 @@ Select « Custom » as Application, and paste the following (replace `USERNAME
 
 ```applescript
 on alfred_script(q)
-  write_to_file(q, "/Users/USERNAME/.hyper_plugins/hyperalfred.txt", false)
-  tell application "Hyper" to activate
+    write_to_file(q, "/Users/USERNAME/.hyper_plugins/hyperalfred.txt", false)
+    tell application "Hyper" to activate
 end alfred_script
 
 on write_to_file(this_data, target_file, append_data)
@@ -50,3 +50,7 @@ You're ready to go !
 
 As you may know, Electron apps are known to be not working with Apple Script. I'm using a buffer file (located in `~/.hyper_plugins/hyperalfred.txt`)
 Once the plugin is loaded on Hyper, it checks that file for a command. If there is one, it just write it using Hyper API and clears the file.
+
+## Caveats
+
+hyperalfred will only work if Hyper is not already the focused application. That means you can not expect to launch a command from Alfred if Hyper is the focused application. This is because Alfred does not make Hyper to loose focus.

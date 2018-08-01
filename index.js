@@ -3,8 +3,6 @@ const { promisify } = require('util')
 const { resolve } = require('path')
 const { homedir } = require('os')
 
-let loadedCommand = false
-
 const readFile = promisify(fs.readFile)
 const writeFile = promisify(fs.writeFile)
 const access = promisify(fs.access)
@@ -73,13 +71,7 @@ exports.onWindow = win => {
 }
 
 exports.middleware = (store) => (next) => (action) => {
-  if (loadedCommand) {
-    return next(action)
-  }
-
-  if ('SESSION_ADD' === action.type) {
-    loadedCommand = true
-
+  if ('SESSION_ADD' === action.type || 'SESSION_SET_ACTIVE' === action.type) {
     const sessionId = action.uid
 
     setTimeout(() => rpc.emit('hyperalfred write command', sessionId), 200)
