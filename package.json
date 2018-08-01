@@ -1,6 +1,6 @@
 {
   "name": "hyperalfred",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Open hyper with alfred commands",
   "main": "index.js",
   "keywords": [
