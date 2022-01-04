@@ -55,4 +55,4 @@ Once the plugin is loaded on Hyper, it checks that file for a command. If there 
 
 ## Caveats
 
-hyperalfred will not work if Hyper is **not** already the focused application.
+hyperalfred will only work if Hyper is **not** already the focused application.
